@@ -1,0 +1,524 @@
+{
+    "dispositivos": [
+    {
+      "id": "69508433-1569-47a4-9591-447c3c4bdcbd",
+      "tipo": "camera",
+      "nombre": "Business G235",
+      "modelo": "G235",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": false,
+      "movement_detection": true
+    },
+    {
+      "id": "cc077ab4-432b-43b9-85d3-d256dcc887fb",
+      "tipo": "sensor-open-close",
+      "nombre": "Kasa A540",
+      "modelo": "A540",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_737708-MLU75995534252_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_900391-MLU75995534258_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_996743-MLU78617728014_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_665795-MLU78617728018_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_859473-MLU78851895417_082024-F.webp",
+          "es_principal": true
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "6f78b79a-2dcb-4414-9d7b-0dc4eb15258d",
+      "tipo": "sensor-movement",
+      "nombre": "Smart H313",
+      "modelo": "H313",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_710567-MLU74978946520_032024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_901269-MLU75119028651_032024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_659683-MLU75119028653_032024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "17db2c55-2216-429a-9e35-58c1e95d8f10",
+      "tipo": "sensor-open-close",
+      "nombre": "Kasa B150",
+      "modelo": "B150",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_737708-MLU75995534252_052024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_900391-MLU75995534258_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_996743-MLU78617728014_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_665795-MLU78617728018_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_859473-MLU78851895417_082024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "ca8e7935-ce91-4ff4-8cfb-c1f634b46842",
+      "tipo": "sensor-open-close",
+      "nombre": "Home H223",
+      "modelo": "H223",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_737708-MLU75995534252_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_900391-MLU75995534258_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_996743-MLU78617728014_082024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_665795-MLU78617728018_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_859473-MLU78851895417_082024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "60ba44c4-bf60-42ed-9341-71ca3d85e571",
+      "tipo": "sensor-movement",
+      "nombre": "Smart D204",
+      "modelo": "D204",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_710567-MLU74978946520_032024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_901269-MLU75119028651_032024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_659683-MLU75119028653_032024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "f90162db-b9d8-4be7-aac6-6cf8ed8536a2",
+      "tipo": "camera",
+      "nombre": "OMADA G423",
+      "modelo": "G423",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": true
+        }
+      ],
+      "person_detection": false,
+      "movement_detection": false
+    },
+    {
+      "id": "c99d6b10-728c-43a9-837c-28fd080a34d0",
+      "tipo": "sensor-movement",
+      "nombre": "TT C134",
+      "modelo": "C134",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_710567-MLU74978946520_032024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_901269-MLU75119028651_032024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_659683-MLU75119028653_032024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "da6acd80-931b-41c0-a87b-9ffa4e7c12db",
+      "tipo": "camera",
+      "nombre": "TAPO A131",
+      "modelo": "A131",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": false,
+      "movement_detection": false
+    },
+    {
+      "id": "ee4c7172-32f9-4309-8ce3-e0b0508c8416",
+      "tipo": "camera",
+      "nombre": "VIGI A132",
+      "modelo": "A132",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": true
+        }
+      ],
+      "person_detection": true,
+      "movement_detection": true
+    },
+    {
+      "id": "b6f59fe4-ec67-42ff-ab8e-3a26abfb15a5",
+      "tipo": "camera",
+      "nombre": "VIGI A322",
+      "modelo": "A322",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": true
+        }
+      ],
+      "person_detection": false,
+      "movement_detection": true
+    },
+    {
+      "id": "0cc8246b-89f3-4b8d-8ebf-9aa72f7b49d4",
+      "tipo": "camera",
+      "nombre": "Business B323",
+      "modelo": "B323",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": true,
+      "movement_detection": false
+    },
+    {
+      "id": "6a83a535-a0cd-4dec-9d8c-02f7f296ad0b",
+      "tipo": "camera",
+      "nombre": "OMADA F410",
+      "modelo": "F410",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": false,
+      "movement_detection": false
+    },
+    {
+      "id": "2aaec8d4-1839-4f03-9e74-5ccbf2f6ad5c",
+      "tipo": "sensor-movement",
+      "nombre": "G E230",
+      "modelo": "E230",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_710567-MLU74978946520_032024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_901269-MLU75119028651_032024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_659683-MLU75119028653_032024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "368e66d0-3983-46e5-9295-98d299459c06",
+      "tipo": "sensor-open-close",
+      "nombre": "Smart H204",
+      "modelo": "H204",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_737708-MLU75995534252_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_900391-MLU75995534258_052024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_996743-MLU78617728014_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_665795-MLU78617728018_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_859473-MLU78851895417_082024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "26495e7c-9024-4a46-b439-6ff2c2596bdc",
+      "tipo": "sensor-open-close",
+      "nombre": "G G543",
+      "modelo": "G543",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_737708-MLU75995534252_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_900391-MLU75995534258_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_996743-MLU78617728014_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_665795-MLU78617728018_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_859473-MLU78851895417_082024-F.webp",
+          "es_principal": true
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "6bc73c94-6b75-4bc7-b43f-75110a2fabff",
+      "tipo": "camera",
+      "nombre": "TAPO C411",
+      "modelo": "C411",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_787853-MLU71131483530_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_603102-MLU71171145159_082023-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_600987-MLU71170963657_082023-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_953692-MLU71132034844_082023-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": false,
+      "movement_detection": true
+    },
+    {
+      "id": "118be200-c167-419d-b490-65994c239f86",
+      "tipo": "sensor-movement",
+      "nombre": "TT C152",
+      "modelo": "C152",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_710567-MLU74978946520_032024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_901269-MLU75119028651_032024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_659683-MLU75119028653_032024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "acb2aa26-fb00-4368-bcfd-ba8debcc6104",
+      "tipo": "sensor-movement",
+      "nombre": "TT H354",
+      "modelo": "H354",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_710567-MLU74978946520_032024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_901269-MLU75119028651_032024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_659683-MLU75119028653_032024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    },
+    {
+      "id": "9d5af6b0-5aa4-40fd-9c80-b646a6c05795",
+      "tipo": "sensor-open-close",
+      "nombre": "Kasa E332",
+      "modelo": "E332",
+      "fotos": [
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_737708-MLU75995534252_052024-F.webp",
+          "es_principal": true
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_900391-MLU75995534258_052024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_996743-MLU78617728014_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_665795-MLU78617728018_082024-F.webp",
+          "es_principal": false
+        },
+        {
+          "path": "https://http2.mlstatic.com/D_NQ_NP_2X_859473-MLU78851895417_082024-F.webp",
+          "es_principal": false
+        }
+      ],
+      "person_detection": null,
+      "movement_detection": null
+    }
+  ]
+}

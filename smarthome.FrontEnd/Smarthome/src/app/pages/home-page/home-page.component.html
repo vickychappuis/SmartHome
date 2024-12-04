@@ -1,0 +1,12 @@
+<main
+  class="flex justify-center items-center flex-col gap-2 h-[calc(100vh-100px)] overflow-hidden"
+>
+  <h1 class="text-3xl font-medium font-sans">SmartHome</h1>
+  <h2 class="text-lg font-medium font-mono">Welcome to SmartHome!</h2>
+  <img src="/logo.small.png" alt="logo" class="w-40 h-40" />
+  <p>Logged in as</p>
+  <p>{{ user.email }} - {{ getRole() }}</p>
+  @if (company) {
+  <p>Your company is {{ company.name }}</p>
+  }
+</main>

@@ -1,0 +1,17 @@
+<p-dialog
+  header="Add Member"
+  [modal]="true"
+  [(visible)]="visible"
+  (onHide)="close()"
+  styleClass="w-1/2"
+  contentStyleClass="overflow-visible"
+>
+  <app-generic-form
+    [fields]="fields"
+    (formSubmit)="onSubmit($event)"
+    submitButtonLabel="Add Member"
+  />
+  @if (error) {
+  <p class="mt-2 text-red-500">{{ error }}</p>
+  }
+</p-dialog>

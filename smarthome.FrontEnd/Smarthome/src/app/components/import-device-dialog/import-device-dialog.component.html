@@ -1,0 +1,20 @@
+<p-dialog
+  header="Import Devices"
+  [modal]="true"
+  [(visible)]="visible"
+  (onHide)="close()"
+  styleClass="w-1/2"
+  contentStyleClass="overflow-visible"
+>
+  @if (loading) {
+  <p-progressBar mode="indeterminate" styleClass="mb-8 h-4" />
+  } @else { @if (fields$ | async; as fields) {
+  <app-generic-form
+    [fields]="fields"
+    (formSubmit)="onSubmit($event)"
+    submitButtonLabel="Import"
+  />
+  } @if (error) {
+  <p class="mt-2 text-red-500">{{ error }}</p>
+  } }
+</p-dialog>

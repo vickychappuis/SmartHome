@@ -1,0 +1,26 @@
+<main class="flex justify-center items-center h-screen overflow-hidden">
+  <div
+    class="lg:w-1/4 md:w-1/2 w-3/4 border-[1px] border-gray-300 rounded-md p-8 shadow-md"
+  >
+    <div class="flex flex-col justify-center items-center">
+      <img src="/logo.small.png" alt="logo" class="w-56" />
+      <h1 class="text-2xl font-medium mb-4">Login &middot; Smarthome</h1>
+    </div>
+    <app-generic-form
+      [fields]="loginFields"
+      (formSubmit)="onSubmit($event)"
+      [submitButtonLabel]="'Login'"
+    ></app-generic-form>
+    <div class="flex flex-col items-end mt-2 gap-2">
+      <a
+        [routerLink]="'/signup'"
+        [queryParams]="{ returnUrl: returnUrl }"
+        class="text-blue-700"
+        >Don't have an account?</a
+      >
+    </div>
+    @if (error) {
+    <p class="text-red-500 mt-4 text-end">{{ error }}</p>
+    }
+  </div>
+</main>

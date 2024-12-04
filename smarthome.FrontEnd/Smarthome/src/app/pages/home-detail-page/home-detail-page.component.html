@@ -1,0 +1,177 @@
+<main class="lg:mx-40 md:mx-28 mx-12 my-10">
+  <article class="flex flex-col gap-4">
+    <header class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-medium">Home #{{ homeId }}</h1>
+
+      <a [routerLink]="['/homes', homeId, 'notifications']">
+        <i class="pi pi-bell mr-4"></i>
+      </a>
+    </header>
+    <section>
+      @if (homeMembers$ | async; as homeMembers) {
+      <div class="flex justify-between items-center">
+        <h2 class="text-lg">Members</h2>
+        <button
+          pButton
+          type="button"
+          class="p-button-text p-1"
+          (click)="addMemberDialogVisible = true"
+        >
+          <span class="pi pi-plus"></span>
+        </button>
+      </div>
+      <p-table
+        [value]="homeMembers"
+        [tableStyle]="{ 'min-width': '50rem', 'margin-top': '1rem' }"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Can add device</th>
+            <th>Can list devices</th>
+            <th>Can receive notifications</th>
+            <th>Image Url</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-homeMember>
+          <tr>
+            <td>{{ homeMember.firstName }}</td>
+            <td>{{ homeMember.email }}</td>
+            <td>{{ homeMember.canAddDevice ? 'Yes' : 'No' }}</td>
+            <td>{{ homeMember.canListDevices ? 'Yes' : 'No' }}</td>
+            <td>
+              <input
+                type="checkbox"
+                [checked]="homeMember.canReceiveNotifications"
+                (change)="
+                  onCanReceiveNotificationsChange(homeMember.userId, $event)
+                "
+              />
+            </td>
+            <td>{{ homeMember.imageUrl }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      } @else {
+      <p>Loading...</p>
+      }
+    </section>
+
+    <section>
+      @if (homeDevices$ | async; as homeDevices) {
+      <div class="flex justify-between items-center gap-4">
+        <h2 class="text-lg">Devices</h2>
+        <div class="flex flex-grow gap-4 items-center">
+          @if (rooms$ | async; as rooms) {
+          <p-dropdown
+            [options]="rooms"
+            [(ngModel)]="devicesRoomQuery"
+            optionLabel="roomName"
+            placeholder="Search by room"
+          />
+          }
+          <button
+            pButton
+            pRipple
+            (click)="onSearchDevices()"
+            class="py-2 px-4"
+            severity="info"
+          >
+            Search
+          </button>
+        </div>
+        <button
+          pButton
+          type="button"
+          class="p-button-text p-1"
+          (click)="addDeviceDialogVisible = true"
+        >
+          <span class="pi pi-plus"></span>
+        </button>
+      </div>
+      <p-table
+        [value]="homeDevices"
+        [tableStyle]="{ 'min-width': '50rem', 'margin-top': '1rem' }"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Description</th>
+            <th>Is connected</th>
+            <th>Image Url</th>
+            <th>Room Id</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-homeDevice>
+          <tr>
+            <td>{{ homeDevice.name }}</td>
+            <td>{{ homeDevice.model }}</td>
+            <td>{{ homeDevice.description }}</td>
+            <td>{{ homeDevice.isConnected ? 'Yes' : 'No' }}</td>
+            <td>{{ homeDevice.imageUrl }}</td>
+            <td>{{ homeDevice.roomId }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      } @else {
+      <p>Loading...</p>
+      }
+    </section>
+
+    <section>
+      @if (rooms$ | async; as rooms) {
+      <div class="flex justify-between items-center">
+        <h2 class="text-lg">Rooms</h2>
+        <button
+          pButton
+          type="button"
+          class="p-button-text p-1"
+          (click)="addRoomDialogVisible = true"
+        >
+          <span class="pi pi-plus"></span>
+        </button>
+      </div>
+      <p-table
+        [value]="rooms"
+        [tableStyle]="{ 'min-width': '50rem', 'margin-top': '1rem' }"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-room>
+          <tr>
+            <td>{{ room.roomName }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      } @else {
+      <p>Loading...</p>
+      }
+    </section>
+  </article>
+</main>
+
+<app-add-member-dialog
+  [visible]="addMemberDialogVisible"
+  [homeId]="homeId"
+  (onAddMember)="onAddMember()"
+  (onClose)="addMemberDialogVisible = false"
+></app-add-member-dialog>
+
+<app-add-device-dialog
+  [visible]="addDeviceDialogVisible"
+  [homeId]="homeId"
+  (onAddDevice)="onAddDevice()"
+  (onClose)="addDeviceDialogVisible = false"
+></app-add-device-dialog>
+
+<app-add-room-dialog
+  [visible]="addRoomDialogVisible"
+  [homeId]="homeId"
+  (onAddRoom)="onAddRoom()"
+  (onClose)="addRoomDialogVisible = false"
+></app-add-room-dialog>

@@ -1,0 +1,33 @@
+<main class="mx-28 my-10">
+    @if(device$ | async; as device){
+        
+    <div class="device-details">
+        <h1 class="text-3xl font-bold">{{ device.name }}</h1>
+        <div class="device-info mt-4">
+            <div class="info-item">
+                <span class="font-bold">Name:</span> {{ device.name }}
+            </div>
+            <div class="info-item">
+                <span class="font-bold">Device Type:</span> {{ getDeviceType(device.deviceType) }}
+            </div>
+            <div class="info-item">
+                <span class="font-bold">Model:</span> {{ device.model }}
+            </div>
+            <div class="info-item">
+                <span class="font-bold">Description:</span> {{ device.description }}
+            </div>
+            <div class="info-item">
+                <span class="font-bold">Image URL:</span> <a [href]="device.imageUrl" target="_blank">{{ device.imageUrl }}</a>
+            </div>
+            <div class="info-item">
+                <span class="font-bold">Company name:</span> {{ companyName}}
+            </div>
+        </div>
+    </div>
+    }
+    @else {
+        <div class="flex justify-center items-center h-96">
+            <p class="text-2xl text-gray-500">Loading...</p>
+        </div>
+    }
+</main>

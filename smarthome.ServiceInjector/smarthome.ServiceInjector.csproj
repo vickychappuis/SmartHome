@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\smarthome.DataAccess\smarthome.DataAccess.csproj" />
+    <ProjectReference Include="..\smarthome.BusinessLogic\smarthome.BusinessLogic.csproj" />
+    <ProjectReference Include="..\smarthome.Domain\smarthome.Domain.csproj" />
+    <ProjectReference Include="..\smarthome.IBusinessLogic\smarthome.IBusinessLogic.csproj" />
+  </ItemGroup>
+
+
+</Project>

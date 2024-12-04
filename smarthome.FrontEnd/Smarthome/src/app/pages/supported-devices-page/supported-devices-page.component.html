@@ -1,0 +1,14 @@
+<main class="lg:mx-40 md:mx-28 mx-12 my-10">
+    <header class="flex justify-between items-center">
+        <h1 class="text-2xl font-medium">Device types</h1>
+    </header>
+    <section class="mt-8">
+        <ul>
+            <li *ngFor="let deviceType of deviceTypes" class="mb-4">
+                <div class="p-4 border rounded shadow-sm">
+                    <h2 class="text-xl font-semibold">{{ deviceType }}</h2>
+                </div>
+            </li>
+        </ul>
+    </section>
+</main>

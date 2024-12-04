@@ -1,0 +1,3266 @@
+{
+	"info": {
+		"_postman_id": "a4634047-d71b-461c-9c76-e7ffc6758e37",
+		"name": "Smart Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33196534",
+		"_collection_link": "https://da2333.postman.co/workspace/DA2-Workspace~9a9ea3c0-e70c-46a4-9da6-04e0340416ae/collection/33196534-a4634047-d71b-461c-9c76-e7ffc6758e37?action=share&source=collection_link&creator=33196534"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"johndoe@gmail.com\",\n  \"password\": \"johnTheBest!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "User Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"nonExistingMail@xyz.com\",\n  \"password\": \"testing!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Wrong Password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"johndoe@gmail.com\",\n  \"password\": \"BadPassword!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Signup",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"johndoe@gmail.com\",\n  \"firstName\": \"John\",\n  \"imageUrl\": \"https://placehold.co/128\",\n  \"lastName\": \"Doe\",\n  \"password\": \"johnTheBest!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/logout",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "companies",
+					"item": [
+						{
+							"name": "Add Company: HomeOwnerRole",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer homeownertoken",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/companies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"companies"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unsuccessful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Apple\",\r\n  \"logotypeUrl\": \"https://logourl.com/apple.png\",\r\n  \"rut\": \"789012345\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Get Companies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/companies?skip=<integer>&take=<integer>&companyName=<string>&companyOwnerName=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"companies"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "<integer>"
+										},
+										{
+											"key": "take",
+											"value": "<integer>"
+										},
+										{
+											"key": "companyName",
+											"value": "<string>"
+										},
+										{
+											"key": "companyOwnerName",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyOwnerName",
+													"value": "<string>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "With Pagination",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/companies?skip=1&take=2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "1"
+												},
+												{
+													"key": "take",
+													"value": "2"
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyOwnerName",
+													"value": "<string>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By Name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/companies?companyName=Green Energy Corp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "Green Energy Corp"
+												},
+												{
+													"key": "companyOwnerName",
+													"value": "<string>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By Owner Name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/companies?companyOwnerName=Jane",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyOwnerName",
+													"value": "Jane"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Add Company: CompanyOwnerRole",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer def456token",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"logotypeUrl\": \"<string>\",\n  \"rut\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/companies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"companies"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Apple\",\n  \"logotypeUrl\": \"https://logourl.com/apple.png\",\n  \"rut\": \"789012345\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "User Already Has A Company",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Apple\",\n  \"logotypeUrl\": \"https://logourl.com/apple.png\",\n  \"rut\": \"789012345\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "No Body",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"logotypeUrl\": \"<string>\",\n  \"rut\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "InvalidData",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"\",\n  \"logotypeUrl\": \"\",\n  \"rut\": \"\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Missing Data",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ne\": \"Apple\",\n  \"logotypeUrl\": \"https://logourl.com/apple.png\",\n  \"rut\": 789012345\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/companies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "devices",
+					"item": [
+						{
+							"name": "types",
+							"item": [
+								{
+									"name": "Get Device Types",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/devices/types",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices",
+												"types"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/devices/types",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"devices",
+														"types"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get Devices",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "homeownertoken",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/devices?skip=<integer>&take=<integer>&name=<string>&model=<string>&companyName=<string>&deviceType=119",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"devices"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "<integer>"
+										},
+										{
+											"key": "take",
+											"value": "<integer>"
+										},
+										{
+											"key": "name",
+											"value": "<string>"
+										},
+										{
+											"key": "model",
+											"value": "<string>"
+										},
+										{
+											"key": "companyName",
+											"value": "<string>"
+										},
+										{
+											"key": "deviceType",
+											"value": "119"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/devices",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "model",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "deviceType",
+													"value": "119",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "With pagination",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?skip=1&take=2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "1"
+												},
+												{
+													"key": "take",
+													"value": "2"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "model",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "deviceType",
+													"value": "119",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?name=Outdoor Security Camera",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "Outdoor Security Camera"
+												},
+												{
+													"key": "model",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "deviceType",
+													"value": "119",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By model",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?model=SC-200",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "model",
+													"value": "SC-200"
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "deviceType",
+													"value": "119",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?deviceType=0",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "skip",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "take",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "model",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "companyName",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "deviceType",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Add Device",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "def456token",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"model\": \"<string>\",\n  \"description\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"companyId\": \"<integer>\",\n  \"isInterior\": \"<boolean>\",\n  \"isExterior\": \"<boolean>\",\n  \"canDetectMotion\": \"<boolean>\",\n  \"canDetectPerson\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/devices?type=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"devices"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Post Window Sensor",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"windowSensor\",\n  \"model\": \"IOS4\",\n  \"description\": \"The best windowSensor in town\",\n  \"imageUrl\": \"logotype\",\n  \"companyId\": 2\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?type=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid Device Type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"windowSensor\",\n  \"model\": \"IOS4\",\n  \"description\": \"The best windowSensor in town\",\n  \"imageUrl\": \"logotype\",\n  \"companyId\": 2\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?type=S",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "S"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Post Security Camera",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"security camera\",\n  \"model\": \"IOS4\",\n  \"description\": \"The best securityCamera in town\",\n  \"imageUrl\": \"logotype\",\n  \"companyId\": 2,\n  \"isInterior\": false,\n  \"isExterior\": true,\n  \"canDetectMotion\": true,\n  \"canDetectPerson\": false\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/devices?type=0",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"devices"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "newcompanyownertoken",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "homes",
+					"item": [
+						{
+							"name": "{homeId}",
+							"item": [
+								{
+									"name": "members",
+									"item": [
+										{
+											"name": "notifications",
+											"item": [
+												{
+													"name": "/api/homes/:homeId/members/notifications",
+													"request": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"userId\": \"<integer>\",\n  \"allowed\": \"<boolean>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/members/notifications",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"members",
+																"notifications"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "<integer>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "PATCH",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"userId\": \"6\",\n  \"allowed\": true\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/homes/:homeId/members/notifications",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"homes",
+																		":homeId",
+																		"members",
+																		"notifications"
+																	],
+																	"variable": [
+																		{
+																			"key": "homeId",
+																			"value": "1"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "/api/homes/:homeId/members",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/homes/:homeId/members",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"homes",
+														":homeId",
+														"members"
+													],
+													"variable": [
+														{
+															"key": "homeId",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/members",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"members"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/api/homes/:homeId/members",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "<integer>",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/homes/:homeId/members",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"homes",
+														":homeId",
+														"members"
+													],
+													"variable": [
+														{
+															"key": "homeId",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "1023",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/members",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"members"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "devices",
+									"item": [
+										{
+											"name": "{deviceId}",
+											"item": [
+												{
+													"name": "notifications",
+													"item": [
+														{
+															"name": "/api/homes/:homeId/devices/:deviceId/notifications",
+															"request": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "<string>",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/homes/:homeId/devices/:deviceId/notifications",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"homes",
+																		":homeId",
+																		"devices",
+																		":deviceId",
+																		"notifications"
+																	],
+																	"variable": [
+																		{
+																			"key": "homeId",
+																			"value": "<integer>",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "deviceId",
+																			"value": "<integer>",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "Person",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "\"Person\"",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/homes/:homeId/devices/:deviceId/notifications",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"homes",
+																				":homeId",
+																				"devices",
+																				":deviceId",
+																				"notifications"
+																			],
+																			"variable": [
+																				{
+																					"key": "homeId",
+																					"value": "1"
+																				},
+																				{
+																					"key": "deviceId",
+																					"value": "1"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [],
+																	"cookie": [],
+																	"body": ""
+																},
+																{
+																	"name": "Motion detection notification",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "\"Motion\"",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/homes/:homeId/devices/:deviceId/notifications",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"homes",
+																				":homeId",
+																				"devices",
+																				":deviceId",
+																				"notifications"
+																			],
+																			"variable": [
+																				{
+																					"key": "homeId",
+																					"value": "<integer>",
+																					"description": "(Required) "
+																				},
+																				{
+																					"key": "deviceId",
+																					"value": "<integer>",
+																					"description": "(Required) "
+																				}
+																			]
+																		}
+																	},
+																	"_postman_previewlanguage": null,
+																	"header": null,
+																	"cookie": [],
+																	"body": null
+																},
+																{
+																	"name": "Invalid notification type",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "\"invalid\"",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/homes/:homeId/devices/:deviceId/notifications",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"homes",
+																				":homeId",
+																				"devices",
+																				":deviceId",
+																				"notifications"
+																			],
+																			"variable": [
+																				{
+																					"key": "homeId",
+																					"value": "1",
+																					"description": "(Required) "
+																				},
+																				{
+																					"key": "deviceId",
+																					"value": "1",
+																					"description": "(Required) "
+																				}
+																			]
+																		}
+																	},
+																	"_postman_previewlanguage": null,
+																	"header": null,
+																	"cookie": [],
+																	"body": null
+																},
+																{
+																	"name": "No body",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "<string>",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/homes/:homeId/devices/:deviceId/notifications",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"homes",
+																				":homeId",
+																				"devices",
+																				":deviceId",
+																				"notifications"
+																			],
+																			"variable": [
+																				{
+																					"key": "homeId",
+																					"value": "<integer>",
+																					"description": "(Required) "
+																				},
+																				{
+																					"key": "deviceId",
+																					"value": "<integer>",
+																					"description": "(Required) "
+																				}
+																			]
+																		}
+																	},
+																	"_postman_previewlanguage": null,
+																	"header": null,
+																	"cookie": [],
+																	"body": null
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Get Home Devices",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"homes",
+														":homeId",
+														"devices"
+													],
+													"variable": [
+														{
+															"key": "homeId",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Not a Member",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "2"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Home Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "19276345"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Add Device: HomeOwner",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "homeownertoken",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "<integer>",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"homes",
+														":homeId",
+														"devices"
+													],
+													"variable": [
+														{
+															"key": "homeId",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "1",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": null,
+													"header": null,
+													"cookie": [],
+													"body": null
+												},
+												{
+													"name": "NoBody",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "<integer>",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": null,
+													"header": null,
+													"cookie": [],
+													"body": null
+												},
+												{
+													"name": "Home Not Found",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "1",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "2000",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": null,
+													"header": null,
+													"cookie": [],
+													"body": null
+												},
+												{
+													"name": "Device Not Found",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "20000",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": null,
+													"header": null,
+													"cookie": [],
+													"body": null
+												},
+												{
+													"name": "Invalid data",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "\"hola\"",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": null,
+													"header": null,
+													"cookie": [],
+													"body": null
+												}
+											]
+										},
+										{
+											"name": "Add Device: NoAuth",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "<integer>",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"homes",
+														":homeId",
+														"devices"
+													],
+													"variable": [
+														{
+															"key": "homeId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Fail: No auth",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "1",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/devices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"devices"
+															],
+															"variable": [
+																{
+																	"key": "homeId",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": null,
+													"header": null,
+													"cookie": [],
+													"body": null
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "notifications",
+									"item": [
+										{
+											"name": "Get Notifications By Home ID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/homes/:homeId/notifications",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"homes",
+														":homeId",
+														"notifications"
+													],
+													"variable": [
+														{
+															"key": "homeId",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/homes/:homeId/notifications",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"homes",
+																":homeId",
+																"notifications"
+															],
+															"variable": [
+																{
+																	"key": "homeId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Add Home",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "homeownertoken",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"<string>\",\n  \"latitude\": \"<double>\",\n  \"longitude\": \"<double>\",\n  \"maxMembers\": \"<integer>\",\n  \"homeId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/homes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"homes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"London\",\n  \"latitude\": \"2\",\n  \"longitude\": \"2\",\n  \"maxMembers\": \"2\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/homes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"homes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "Bearer homeownertoken",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{userId}",
+							"item": [
+								{
+									"name": "Delete User By ID: NotAdministratorRoleDeleteRequest",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "homeownertoken",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users/:userId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "NotAdministratorDeleteRequest",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Get User By ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users/:userId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "1003"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Non Existing User",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "12865410"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete User By ID",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users/:userId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "1024"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Non Existant User",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "1000000",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/users?name=<string>&userRole=0&pageNumber=<integer>&pageSize=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "<string>"
+										},
+										{
+											"key": "userRole",
+											"value": "0"
+										},
+										{
+											"key": "pageNumber",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "userRole",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "pageNumber",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "pageSize",
+													"value": "<integer>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "With Pagination",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users?pageNumber=2&pageSize=3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "userRole",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "pageNumber",
+													"value": "2"
+												},
+												{
+													"key": "pageSize",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By Name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users?name=John",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "John"
+												},
+												{
+													"key": "userRole",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "pageNumber",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "pageSize",
+													"value": "<integer>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "By Role",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users?userRole=2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "userRole",
+													"value": "2"
+												},
+												{
+													"key": "pageNumber",
+													"value": "<integer>",
+													"disabled": true
+												},
+												{
+													"key": "pageSize",
+													"value": "<integer>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": \"<string>\",\n  \"imageUrl\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Company Owner",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Trevor\",\n  \"lastName\": \"Jones\",\n  \"email\": \"tjones@gmail.com\",\n  \"password\": \"TrevorIsTheBest!\",\n  \"role\": \"CompanyOwner\",\n  \"imageUrl\": \"https://placehold.co/128\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Administrator",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Trevor\",\n  \"lastName\": \"Jones\",\n  \"email\": \"tjones@gmail.com\",\n  \"password\": \"TrevorIsTheBest!\",\n  \"role\": \"CompanyOwner\",\n  \"imageUrl\": \"https://placehold.co/128\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No body",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Invalid data",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": \"<string>\",\n  \"imageUrl\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "/api/users",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": \"<string>\",\n  \"imageUrl\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "Bearer abc123token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}

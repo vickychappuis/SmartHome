@@ -1,0 +1,70 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div [class]="fieldContainerClass">
+    <div *ngFor="let field of formFields; trackByIndex" [class]="field.class">
+      <div class="flex flex-col gap-2">
+        <label for="{{ field.key }}">{{ field.label }}</label>
+        <ng-container [ngSwitch]="field.type">
+          <p-dropdown
+            *ngSwitchCase="'select'"
+            id="{{ field.key }}"
+            styleClass="py-0 px-1 w-full"
+            [formControlName]="field.key"
+            [options]="field.options"
+            optionLabel="label"
+            optionValue="value"
+            placeholder="{{ field.placeholder }}"
+          />
+
+          <p-checkbox
+            *ngSwitchCase="'checkbox'"
+            [binary]="true"
+            [inputId]="field.key"
+            [formControlName]="field.key"
+            [value]="true"
+          />
+
+          <textarea
+            *ngSwitchCase="'textarea'"
+            pInputTextarea
+            rows="10"
+            class="py-1 px-2"
+            id="{{ field.key }}"
+            [formControlName]="field.key"
+            placeholder="{{ field.placeholder }}"
+          ></textarea>
+
+          <input
+            *ngSwitchDefault
+            pInputText
+            type="{{ field.type }}"
+            class="py-1 px-2"
+            id="{{ field.key }}"
+            [formControlName]="field.key"
+            placeholder="{{ field.placeholder }}"
+          />
+        </ng-container>
+        <div class="flex flex-col gap-1 mb-1">
+          <small id="{{ field.key }}-help">
+            {{ field.helpText }}
+          </small>
+          @if (field.validations?.[0]; as validation) {
+          <small
+            class="text-red-500"
+            [hidden]="
+              formGroup.controls[field.key].valid ||
+              !formGroup.controls[field.key].value
+            "
+          >
+            {{ validation.message }}
+          </small>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-end">
+    <button type="submit" pButton class="mt-2" [disabled]="formGroup.invalid">
+      {{ submitButtonLabel }}
+    </button>
+  </div>
+</form>

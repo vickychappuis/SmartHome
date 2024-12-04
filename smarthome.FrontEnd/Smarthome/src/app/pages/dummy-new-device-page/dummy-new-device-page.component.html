@@ -1,0 +1,7 @@
+<button pButton pRipple (click)="openImportDialog()">Import Devices</button>
+
+<app-import-device-dialog
+  [visible]="addDeviceDialogVisible"
+  (onClose)="addDeviceDialogVisible = false"
+  (onImportDevices)="onImportDevices()"
+></app-import-device-dialog>

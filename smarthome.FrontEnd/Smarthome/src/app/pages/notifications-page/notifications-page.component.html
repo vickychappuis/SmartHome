@@ -1,0 +1,51 @@
+<main class="lg:mx-40 md:mx-28 mx-12 my-10">
+  <header class="flex justify-between items-center">
+    <h1 class="text-2xl font-medium">Notifications</h1>
+    <div class="flex gap-4 items-center">
+      <p>Filter by:</p>
+      <p-dropdown
+        [options]="readOptions"
+        [(ngModel)]="readQuery"
+        optionLabel="name"
+        placeholder="Filter by Read Status"
+        (onChange)="fetchNotifications()"
+      ></p-dropdown>
+
+      <p>Since:</p>
+      <p-calendar
+        [(ngModel)]="sinceDate"
+        placeholder="Filter Since Date"
+        dateFormat="yy-mm-dd"
+        (onSelect)="fetchNotifications()"
+      ></p-calendar>
+    </div>
+  </header>
+  @if (homeMemberNotifications$ | async; as homeMemberNotifications) {
+
+  <p-table
+    [value]="homeMemberNotifications"
+    [tableStyle]="{ 'min-width': '50rem', 'margin-top': '1rem' }"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Event</th>
+        <th>Triggered By Device with ID</th>
+        <th>Read</th>
+        <th>Created At</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-homeMemberNotification>
+      <tr>
+        <td>{{ homeMemberNotification.notificationId }}</td>
+        <td>{{ homeMemberNotification.notification.eventName }}</td>
+        <td>{{ homeMemberNotification.notification.hardwareId }}</td>
+        <td>{{ homeMemberNotification.read ? 'Yes' : 'No' }}</td>
+        <td>{{ homeMemberNotification.notification.createdAt }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  } @else {
+  <p>Loading...</p>
+  }
+</main>

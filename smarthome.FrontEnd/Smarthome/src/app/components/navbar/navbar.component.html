@@ -1,0 +1,34 @@
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+    <a [routerLink]="'/'">
+      <img src="/logo.small.png" alt="logo" class="w-12 h-12 mr-4" />
+    </a>
+  </ng-template>
+
+  <ng-template pTemplate="item" let-item let-root="root">
+    <a
+      pRipple
+      class="flex align-items-center p-menuitem-link py-2 px-4"
+      [routerLink]="item.routerLink"
+    >
+      <span [class]="item.icon"></span>
+      <span class="ml-2">{{ item.label }}</span>
+      <span
+        *ngIf="item.shortcut"
+        class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1"
+        >{{ item.shortcut }}</span
+      >
+      <i
+        *ngIf="item.items"
+        [ngClass]="[
+          'pi',
+          root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto'
+        ]"
+      ></i>
+    </a>
+  </ng-template>
+
+  <button pRipple (click)="logout()">
+    <i class="pi pi-sign-out mr-4"></i>
+  </button>
+</p-menubar>

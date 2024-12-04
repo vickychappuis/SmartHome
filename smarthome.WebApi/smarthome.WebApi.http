@@ -1,0 +1,10 @@
+@smarthome.WebApi_HostAddress = http://localhost:5227
+
+GET @smarthome.WebApi_HostAddress/api/users
+Accept: application/json
+
+###
+
+POST @smarthome.WebApi_HostAddress/api/homes
+Accept: application/json
+###

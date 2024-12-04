@@ -1,0 +1,24 @@
+<main class="mx-28 my-10">
+  <header class="flex justify-between items-center">
+    <h1 class="text-2xl font-medium">Add Device</h1>
+  </header>
+  <div class="mt-8">
+    <p-dropdown
+      [options]="deviceTypes"
+      optionValue="key"
+      optionLabel="value"
+      [(ngModel)]="selectedDeviceType"
+      (ngModelChange)="updateFields()"
+      styleClass="mb-2"
+    />
+    <app-generic-form
+      [fields]="fields"
+      (formSubmit)="onSubmit($event)"
+      fieldContainerClass="grid grid-cols-2 gap-x-8"
+    ></app-generic-form>
+
+    @if (error) {
+    <p class="text-red-500 mt-2">{{ error }}</p>
+    }
+  </div>
+</main>
